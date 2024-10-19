@@ -1,0 +1,126 @@
+/* home.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+h2 {
+    color: #00FFFF;
+    font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+nav {
+    background-color: #1F1F1F;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: #00FFFF;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #121212;
+}
+
+#home h1 {
+    color: #00FFFF;
+    font-size: 4rem;
+    margin: 0;
+}
+
+#home p {
+    font-size: 1.5rem;
+    color: #66B2FF; /* Updated color */
+    margin-top: 10px;
+}
+
+/* About/Bio Section */
+#about {
+    background-color: #1F1F1F;
+    padding: 50px;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #121212;
+    padding: 50px;
+    text-align: center;
+}
+
+#skills .skill-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 10px;
+    color: #00FFFF;
+    width: 150px;
+    text-align: center;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #1F1F1F;
+    padding: 50px;
+    text-align: center;
+}
+
+#projects .project-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    color: #ddd;
+}
+
+.project a {
+    color: #00FFFF;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #121212;
+    padding: 50px;
+    text-align: center;
+}
+
+#contact a {
+    color: #66B2FF; /* Updated color */
+    font-size: 1.2rem;
+}
