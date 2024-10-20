@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.nabilaboobacker.in']
+ALLOWED_HOSTS = ['www.nabilaboobacker.in', 'portfolio-2smg1bz1v-nabils-projects-39112d3f.vercel.app']
 
 
 # Application definition
