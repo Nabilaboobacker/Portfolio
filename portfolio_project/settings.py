@@ -25,13 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = ['nabilaboobacker.in']
-=======
-ALLOWED_HOSTS = ['www.nabilaboobacker.in', 'portfolio-2smg1bz1v-nabils-projects-39112d3f.vercel.app']
->>>>>>> 2c7f9c3f8361b294eb1b3b2c49c914d6336bcfdb
 
 
 # Application definition
