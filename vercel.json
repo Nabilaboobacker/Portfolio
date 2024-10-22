@@ -1,13 +1,4 @@
 {
-      "git": {
-    "deploymentEnabled": {
-      "preview": false
-    }
-            "routes": [
-    {
-      "source": "/_vercel/insights/script.js",
-      "destination": "404"
-    }
     "version": 2,
     "builds": [
       {
