@@ -7,31 +7,33 @@
     <link rel="icon" type="image/x-icon" href="{% static 'cropped_image.png' %}">
     <title>Nabil Aboobacker | Portfolio</title>
 
-
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        <!-- Link to External CSS -->
-        <link rel="stylesheet" href="{% static 'home.css' %}">
-
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
 </head>
 <body>
-
-    <!-- Navbar -->
+    <!-- Updated Navbar -->
     <nav>
-        <a href="{% url 'home' %}">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 
-    <!-- Home Section -->
+    <!-- Rest of your HTML remains exactly the same -->
     <section id="home">
         <div>
             <h1>Nabil Aboobacker</h1>
@@ -39,13 +41,11 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
         <p>Hi! I'm Nabil Aboobacker, an aspiring Python Django developer with a passion for creating web applications. I have a strong foundation in computer science and am eager to learn and grow in the field. Let's connect and explore opportunities together!</p>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
         <div class="skill-grid">
@@ -57,7 +57,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
@@ -71,7 +70,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
         <p>If you would like to get in touch, feel free to reach out to me at:</p>
@@ -80,7 +78,20 @@
         <a href="https://wa.me/919061828049"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </section>
 
+    <!-- Add JavaScript at the end of body -->
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
 
-
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.hamburger').classList.remove('active');
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
