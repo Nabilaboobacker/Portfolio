@@ -4,25 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="{% static 'cropped_image.png' %}">
-    <title>Nabil Aboobacker | Web Design Al Ain | Django Developer Portfolio</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Professional web design services in Al Ain by Nabil Aboobacker. Explore a portfolio featuring Django development, custom web solutions, and responsive design.">
     <meta name="keywords" content="web design Al Ain, Django developer, Nabil Aboobacker, Python developer, web development Al Ain, responsive web design">
-    <meta name="author" content="Nabil Aboobacker">
+    <link rel="icon" type="image/x-icon" href="{% static 'cropped_image.png' %}">
+    <title>Nabil Aboobacker | Portfolio</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- External CSS -->
+    <!-- Link to External CSS -->
     <link rel="stylesheet" href="{% static 'home.css' %}">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <!-- Updated Navbar -->
     <nav>
         <div class="hamburger">
             <span></span>
@@ -38,21 +34,19 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
+    <!-- Rest of your HTML remains exactly the same -->
     <section id="home">
         <div>
             <h1>Nabil Aboobacker</h1>
-            <p>Providing custom web design solutions in Al Ain. Skilled in Django and Python to create responsive, efficient websites that meet business needs.</p>
+            <p>Django Developer</p>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi! I'm Nabil Aboobacker, a professional Django developer specializing in web design for businesses in Al Ain. With a strong background in computer science and a passion for crafting custom web solutions, I aim to help companies stand out online. Let’s connect to discuss your next project in web design Al Ain!</p>
+        <p>Hi! I'm Nabil Aboobacker, an aspiring Python Django developer with a passion for creating web applications. I have a strong foundation in computer science and am eager to learn and grow in the field. Let's connect and explore opportunities together!</p>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
         <div class="skill-grid">
@@ -64,36 +58,35 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
             {% for project in projects %}
             <div class="project">
-                <h3>{{ project.project_title }} - Web Design Al Ain</h3>
+                <h3>Project {{ forloop.counter }}: {{ project.project_title }}</h3>
                 <p>{{ project.project_description }}</p>
-                <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer">View Project</a>
+                <a href="{{ project.link }}">View Project</a>
             </div>
             {% endfor %}
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Looking for professional web design in Al Ain? Let’s connect! Reach out via email or WhatsApp:</p>
+        <p>If you would like to get in touch, feel free to reach out to me at:</p>
         <a href="mailto:nabil.abuubacker@gmail.com"><i class="fas fa-envelope"></i> Email</a>
         <span> | </span>
-        <a href="https://wa.me/919061828049" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://wa.me/919061828049"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </section>
 
-    <!-- JavaScript -->
+    <!-- Add JavaScript at the end of body -->
     <script>
         document.querySelector('.hamburger').addEventListener('click', function() {
             this.classList.toggle('active');
             document.querySelector('.nav-links').classList.toggle('active');
         });
 
+        // Close menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 document.querySelector('.hamburger').classList.remove('active');
